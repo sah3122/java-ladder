@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
@@ -38,8 +39,8 @@ public class LadderTest {
     @ValueSource(ints = 5)
     void ladderGame(int heightOfLadder) {
         Ladder ladder = Ladder.of(Arrays.asList(new Person("dong"), new Person("chul")), heightOfLadder);
-        Step result = ladder.findResult("dong");
+        List<Step> result = ladder.findResults(Collections.singletonList("dong"));
 
-        assertThat(result.getLinePosition()).isBetween(0, 1);
+        assertThat(result.get(0).getLinePosition()).isBetween(0, 1);
     }
 }

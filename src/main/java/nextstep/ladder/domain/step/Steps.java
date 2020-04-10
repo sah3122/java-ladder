@@ -57,10 +57,6 @@ public class Steps {
         return new Step(linePosition, previousStep.getStepPosition(), () -> false);
     }
 
-    public List<Step> getSteps() {
-        return steps;
-    }
-
     public Step get(int i) {
         return steps.get(i);
     }

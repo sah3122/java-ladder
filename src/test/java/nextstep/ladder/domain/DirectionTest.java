@@ -34,7 +34,7 @@ public class DirectionTest {
         assertThatIllegalArgumentException().isThrownBy(() -> Direction.of(left, right));
     }
 
-    @DisplayName("현재 위치에서 오른쪽 Direction 생성")
+    @DisplayName("현재 방향에서 오른쪽 Direction 생성")
     @Test
     void createRightDirection() {
         boolean left = true;
@@ -43,7 +43,7 @@ public class DirectionTest {
         assertThat(direction.isRight()).isTrue();
     }
 
-    @DisplayName("현재 위치에서 왼쪽 Direction 생성")
+    @DisplayName("현재 방향에서 왼쪽 Direction 생성")
     @Test
     void createLeftDirection() {
         boolean left = true;
